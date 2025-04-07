@@ -17,8 +17,10 @@ def make_question(num):
 	    print("Invalid input. Please try again.")
     return question, a, b, c, d, answer
 #Create a function that writes the question in a text file
-def make_file():
-    pass
+def make_file(item):
+    for text in item:
+	file = open("/storage/emulated/0/quiz.txt", "a")
+	file.write(f"{text}\n")
 #Create a function that asks user to continue or not
 def ask_continue():
     while True:
