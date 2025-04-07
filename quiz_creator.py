@@ -34,3 +34,11 @@ def ask_continue():
 	else:
 	    print("Invalid input. Please try again.")
 #Call the functions to run the program
+count = 1
+while True:
+    quiz = make_question(count)
+    make_file(quiz)
+    if ask_continue():
+        count += 1
+    else:
+        break
