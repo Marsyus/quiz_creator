@@ -7,5 +7,14 @@ def make_file():
     pass
 #Create a function that asks user to continue or not
 def ask_continue():
-    pass
+    while True:
+	ans = input("Would you like to continue? [Y/N]: ")
+	if ans == "Y":
+	    return True
+	    break
+	elif ans == "N":
+	    return False
+	    break
+	else:
+	    print("Invalid input. Please try again.")
 #Call the functions to run the program
