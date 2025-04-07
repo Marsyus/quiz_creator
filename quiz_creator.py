@@ -24,7 +24,7 @@ def make_file(item):
 #Create a function that asks user to continue or not
 def ask_continue():
     while True:
-	ans = input("Would you like to continue? [Y/N]: ")
+	ans = input("Would you like to continue? [Y/N]: ").upper()
 	if ans == "Y":
 	    return True
 	    break
