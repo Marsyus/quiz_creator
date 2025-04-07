@@ -1,7 +1,13 @@
 # Quiz Creator
 #Create a function that asks user input to generate a question
 def make_question():
-    pass
+    question = input(f"Enter your question: ")
+    a = input(f"Enter choice for letter a: ")
+    b = input(f"Enter choice for letter b: ")
+    c = input(f"Enter choice for letter c: ")
+    d = input(f"Enter choice for letter d: ")
+    answer = input("Choose a correct answer [a/b/c/d]: ")
+    return question, a, b, c, d, answer
 #Create a function that writes the question in a text file
 def make_file():
     pass
