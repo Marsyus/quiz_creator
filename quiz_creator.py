@@ -1,11 +1,13 @@
 # Quiz Creator
 #Create a function that asks user input to generate a question
-def make_question():
-    question = input(f"Enter your question: ")
-    a = input(f"Enter choice for letter a: ")
-    b = input(f"Enter choice for letter b: ")
-    c = input(f"Enter choice for letter c: ")
-    d = input(f"Enter choice for letter d: ")
+def make_question(num):
+    question = f"{num}. "
+    question += input(f"Enter your question: ")
+    a, b, c, d = "a.) ", "b.) ", "c.) ", "d.) "
+    a += input(f"Enter choice for letter a: ")
+    b += input(f"Enter choice for letter b: ")
+    c += input(f"Enter choice for letter c: ")
+    d += input(f"Enter choice for letter d: ")
     choices = ["a", "b", "c", "d"]
     while True:
 	answer = input("Choose a correct answer [a/b/c/d]: ")
