@@ -6,7 +6,13 @@ def make_question():
     b = input(f"Enter choice for letter b: ")
     c = input(f"Enter choice for letter c: ")
     d = input(f"Enter choice for letter d: ")
-    answer = input("Choose a correct answer [a/b/c/d]: ")
+    choices = ["a", "b", "c", "d"]
+    while True:
+	answer = input("Choose a correct answer [a/b/c/d]: ")
+	if answer in choices:
+	    break
+	else:
+	    print("Invalid input. Please try again.")
     return question, a, b, c, d, answer
 #Create a function that writes the question in a text file
 def make_file():
