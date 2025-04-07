@@ -27,10 +27,8 @@ def ask_continue():
 	ans = input("Would you like to continue? [Y/N]: ").upper()
 	if ans == "Y":
 	    return True
-	    break
 	elif ans == "N":
 	    return False
-	    break
 	else:
 	    print("Invalid input. Please try again.")
 #Call the functions to run the program
