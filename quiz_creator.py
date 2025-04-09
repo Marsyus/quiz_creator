@@ -1,7 +1,7 @@
 # Quiz Creator
 #Create a function that asks user input to generate a question
-def make_question(num):
-    question = f"{num}. "
+def make_question():
+    question = "Question: "
     question += input(f"Enter your question: ")
     a, b, c, d = "a.) ", "b.) ", "c.) ", "d.) "
     a += input(f"Enter choice for letter a: ")
@@ -33,11 +33,10 @@ def ask_continue():
 	else:
 	    print("Invalid input. Please try again.")
 #Call the functions to run the program
-count = 1
 while True:
-    quiz = make_question(count)
+    quiz = make_question()
     make_file(quiz)
     if ask_continue():
-        count += 1
+        continue
     else:
         break
