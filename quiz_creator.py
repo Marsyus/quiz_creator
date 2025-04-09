@@ -10,7 +10,7 @@ def make_question():
     d += input(f"Enter choice for letter d: ")
     choices = ["a", "b", "c", "d"]
     while True:
-	ans = input("Choose a correct answer [a/b/c/d]: ")
+	ans = input("Choose a correct answer [a/b/c/d]: ").lower()
 	if ans in choices:
 	    answer = "Answer: " + ans
 	    break
