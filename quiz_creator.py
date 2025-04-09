@@ -21,6 +21,7 @@ def make_file(item):
     for text in item:
 	file = open("/storage/emulated/0/quiz.txt", "a")
 	file.write(f"{text}\n")
+	file.close()
 #Create a function that asks user to continue or not
 def ask_continue():
     while True:
