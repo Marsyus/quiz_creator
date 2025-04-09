@@ -10,8 +10,9 @@ def make_question():
     d += input(f"Enter choice for letter d: ")
     choices = ["a", "b", "c", "d"]
     while True:
-	answer = input("Choose a correct answer [a/b/c/d]: ")
-	if answer in choices:
+	answer = "Answer: "
+	answer += input("Choose a correct answer [a/b/c/d]: ")
+	if answer.removeprefix("Answer: ") in choices:
 	    break
 	else:
 	    print("Invalid input. Please try again.")
