@@ -20,7 +20,7 @@ def make_question():
 #Create a function that writes the question in a text file
 def make_file(item):
     for text in item:
-        file = open("/storage/emulated/0/quiz.txt", "a")
+        file = open("quiz.txt", "a")
         file.write(f"{text}\n")
         file.close()
 #Create a function that asks user to continue or not
