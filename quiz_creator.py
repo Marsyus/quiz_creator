@@ -3,11 +3,11 @@
 def make_question():
     question = "Question: "
     question += input(f"Enter your question: ")
-    a, b, c, d = "a.) ", "b.) ", "c.) ", "d.) "
-    a += input(f"Enter choice for letter a: ")
-    b += input(f"Enter choice for letter b: ")
-    c += input(f"Enter choice for letter c: ")
-    d += input(f"Enter choice for letter d: ")
+    choice_a, choice_b, choice_c, choice_d = "a.) ", "b.) ", "c.) ", "d.) "
+    choice_a += input(f"Enter choice for letter a: ")
+    choice_b += input(f"Enter choice for letter b: ")
+    choice_c += input(f"Enter choice for letter c: ")
+    choice_d += input(f"Enter choice for letter d: ")
     choices = ["a", "b", "c", "d"]
     while True:
         ans = input("Choose a correct answer [a/b/c/d]: ").lower()
@@ -16,7 +16,7 @@ def make_question():
             break
         else:
             print("Invalid input. Please try again.")
-    return question, a, b, c, d, answer
+    return question, choice_a, choice_b, choice_c, choice_d, answer
 #Create a function that writes the question in a text file
 def make_file(item):
     for text in item:
