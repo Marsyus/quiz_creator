@@ -1,0 +1,60 @@
+Question: What is the capital of Philippines?
+a.) Manila
+b.) Cebu
+c.) Palawan
+d.) Caloocan
+Answer: a
+Question: What are the first 10 digits of pi?
+a.) 3.141592653
+b.) 3.141596238
+c.) 3.141591346
+d.) 3.141592389
+Answer: a
+Question: How many hearts does an octopus have?
+a.) 1
+b.) 2
+c.) 3
+d.) 4
+Answer: c
+Question: Which of the following is known as the "Blue Planet"?
+a.) Uranus
+b.) Earth
+c.) Neptune
+d.) Kepler-22b
+Answer: b
+Question: Who invented the branch of mathematics named Calculus?
+a.) Carl Friedrich Gauss
+b.) Leonhard Euler
+c.) Blaise Pascal
+d.) Isaac Newton
+Answer: d
+Question: How many bones are there in the adult human body?
+a.) 206
+b.) 201
+c.) 210
+d.) 196
+Answer: a
+Question: Who was credited as the "Father of Computer"?
+a.) Tim Berners-Lee
+b.) Linus Torvalds
+c.) Charles Babbage
+d.) Bill Gates
+Answer: c
+Question: How many colors are there in a rainbow?
+a.) 6
+b.) 7
+c.) 8
+d.) 9
+Answer: b
+Question: A bat and a ball costs $1.10 in total. The bat costs a dollar more than the ball. How much does the ball cost?
+a.) $1.00
+b.) $0.05
+c.) $0.10
+d.) $1.10
+Answer: b
+Question: Supposed you are a time traveler from the year 2100. Your time machine became faulty and suddenly brought you to the year 2000. You can only travel 3 years to the future one at a time and 5 years to the past one at a time. You can only travel to each direction once, can you go back to your origins?
+a.) Yes
+b.) No
+c.) Maybe
+d.) I don't know
+Answer: a
