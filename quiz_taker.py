@@ -49,7 +49,17 @@ def randomize_quiz(question, choice, answer, number):
             break
         else:
             print("Invalid input. Please try again.")
-            
+
 #Create a function that welcomes the user to start and how many items to quiz
+def start_quiz(count):
+    while True:
+        try:
+            num = int(input(f"There are {count} questions available. How many would you like to answer?"))
+            if count >= num >= 0:
+                return num
+            else:
+                print("Invalid input. Please try again.")
+        except:
+            print("Invalid input. Please try again.")
 
 #Call the functions to run the program
