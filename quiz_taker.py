@@ -63,3 +63,9 @@ def start_quiz(count):
             print("Invalid input. Please try again.")
 
 #Call the functions to run the program
+quiz = read_file("quiz.txt")
+count = len(quiz)
+item_count = start_quiz(count)
+for num in range(item_count):
+    randomize_quiz(*quiz, num)
+    
