@@ -67,7 +67,7 @@ def start_quiz(count):
 
 #Call the functions to run the program
 quiz = read_file("quiz.txt")
-count = len(quiz)
+count = len(quiz[0])
 item_count = start_quiz(count)
 for num in range(item_count):
     randomize_quiz(*quiz, num)
