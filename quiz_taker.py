@@ -21,7 +21,7 @@ def read_file(file_name):
             each_choices.append(line)
             if len(each_choices) == 4:
                 choices.append(each_choices)
-                each_choices == []
+                each_choices = []
         elif line.startswith("Answer"):
             correct_answers.append(line.removeprefix("Answer: "))
 
@@ -31,14 +31,14 @@ def read_file(file_name):
 def randomize_quiz(question, choice, answer, number):
     random_order = []
     while True:
-        random_num = random.randint(0, len(question))
+        random_num = random.randint(0, len(question) - 1)
         if random_num not in random_order:
             random_order.append(random_num)
             if len(random_order) == len(question):
                 break
     
     item = random_order[number]
-    print(f"{number}. {question[item]}")
+    print(f"{number + 1}. {question[item]}")
     for each in choice[item]:
         print(each)
     while True:
