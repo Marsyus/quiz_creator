@@ -11,6 +11,18 @@ def read_file(file_name):
     each_choices = []
     correct_answers = []
 
+    for line in contents:
+        line = line.strip()
+        if line.startswith("Question"):
+            questions.append(line.removeprefix("Question: "))
+        elif line.startswith("a", "b", "c", "d"):
+            each_choices.append(line)
+            if len(each_choices) == 4:
+                choices.append(each_choices)
+                each_choices == []
+        elif line.startswith("Answer"):
+            correct_answers.append(line.removeprefix("Answer: "))
+
 #Create a function that randomizes the questions
 
 #Create a function that welcomes the user to start and how many items to quiz
