@@ -11,12 +11,13 @@ def read_file(file_name):
     choices = []
     each_choices = []
     correct_answers = []
+    valid = ("a", "b", "c", "d")
 
     for line in contents:
         line = line.strip()
         if line.startswith("Question"):
             questions.append(line.removeprefix("Question: "))
-        elif line.startswith("a", "b", "c", "d"):
+        elif line.startswith(valid):
             each_choices.append(line)
             if len(each_choices) == 4:
                 choices.append(each_choices)
@@ -68,4 +69,3 @@ count = len(quiz)
 item_count = start_quiz(count)
 for num in range(item_count):
     randomize_quiz(*quiz, num)
-    
