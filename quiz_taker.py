@@ -25,6 +25,8 @@ def read_file(file_name):
         elif line.startswith("Answer"):
             correct_answers.append(line.removeprefix("Answer: "))
 
+    return questions, choices, correct_answers
+
 #Create a function that randomizes the questions
 def randomize_quiz(question, choice, answer, number):
     random_order = []
