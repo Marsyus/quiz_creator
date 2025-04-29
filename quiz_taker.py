@@ -33,6 +33,22 @@ def randomize_quiz(question, choice, answer, number):
             random_order.append(random_num)
             if len(random_order) == len(question):
                 break
+    
+    item = random_order[number]
+    print(f"{number}. {question[item]}")
+    for each in choice[item]:
+        print(each)
+    while True:
+        valid_choices = ("a", "b", "c", "d")
+        user_ans = input("Enter your answer [a/b/c/d]: ")
+        if user_ans in valid_choices:
+            if user_ans == answer[item]:
+                print("You are correct!")
+            else:
+                print("Sorry, you are incorrect!")
+            break
+        else:
+            print("Invalid input. Please try again.")
             
 #Create a function that welcomes the user to start and how many items to quiz
 
