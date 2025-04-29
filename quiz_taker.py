@@ -6,6 +6,11 @@ def read_file(file_name):
     with open(file_name, "r") as file:
         contents = file.readlines()
     
+    questions = []
+    choices = []
+    each_choices = []
+    correct_answers = []
+
 #Create a function that randomizes the questions
 
 #Create a function that welcomes the user to start and how many items to quiz
