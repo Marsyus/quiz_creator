@@ -1,5 +1,6 @@
 # Quiz Taker
 #Import random
+import random
 
 #Create a function that reads a text file that contains questions generated from 'quiz_creator.py'
 def read_file(file_name):
