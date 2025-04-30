@@ -27,17 +27,19 @@ def read_file(file_name):
 
     return questions, choices, correct_answers
 
-#Create a function that randomizes the questions
-def randomize_quiz(question, choice, answer, number):
+#Create a funtion to randomize the order of the questions
+def randomize_order(count):
     random_order = []
     while True:
-        random_num = random.randint(0, len(question) - 1)
+        random_num = random.randint(0, count - 1)
         if random_num not in random_order:
             random_order.append(random_num)
-            if len(random_order) == len(question):
-                break
-    
-    item = random_order[number]
+            if len(random_order) == count:
+                return random_order
+
+#Create a function that displays the questions
+def generate_quiz(question, choice, answer, number, order):
+    item = order[number]
     print(f"{number + 1}. {question[item]}")
     for each in choice[item]:
         print(each)
@@ -79,9 +81,10 @@ def score(points, max_points):
 quiz = read_file("quiz.txt")
 count = len(quiz[0])
 item_count = start_quiz(count)
+random_order = randomize_order(count)
 points = 0
 for num in range(item_count):
     print(f"Score: {points}/{item_count}")
-    points += randomize_quiz(*quiz, num)
+    points += generate_quiz(*quiz, num, random_order)
 
 print(f"You scored {points}/{item_count}", score(points, item_count))
