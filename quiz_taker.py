@@ -36,7 +36,7 @@ def randomize_quiz(question, choice, answer, number):
             random_order.append(random_num)
             if len(random_order) == len(question):
                 break
-    print(random_order)
+    
     item = random_order[number]
     print(f"{number + 1}. {question[item]}")
     for each in choice[item]:
