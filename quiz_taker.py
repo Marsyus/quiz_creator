@@ -36,7 +36,7 @@ def randomize_quiz(question, choice, answer, number):
             random_order.append(random_num)
             if len(random_order) == len(question):
                 break
-    
+    print(random_order)
     item = random_order[number]
     print(f"{number + 1}. {question[item]}")
     for each in choice[item]:
@@ -47,9 +47,10 @@ def randomize_quiz(question, choice, answer, number):
         if user_ans in valid_choices:
             if user_ans == answer[item]:
                 print("You are correct!")
+                return 1
             else:
                 print("Sorry, you are incorrect!")
-            break
+                return 0
         else:
             print("Invalid input. Please try again.")
 
@@ -65,9 +66,22 @@ def start_quiz(count):
         except:
             print("Invalid input. Please try again.")
 
+#Create a scoring system
+def score(points, max_points):
+    if points == max_points:
+        return "Congrats! You perfectly passed the quiz!"
+    elif max_points > points >= max_points / 2:
+        return "Congrats! You passed the quiz!"
+    elif max_points / 2 > points >= 0:
+        return "You did not pass the quiz. Better luck next time!"
+
 #Call the functions to run the program
 quiz = read_file("quiz.txt")
 count = len(quiz[0])
 item_count = start_quiz(count)
+points = 0
 for num in range(item_count):
-    randomize_quiz(*quiz, num)
+    print(f"Score: {points}/{item_count}")
+    points += randomize_quiz(*quiz, num)
+
+print(f"You scored {points}/{item_count}", score(points, item_count))
