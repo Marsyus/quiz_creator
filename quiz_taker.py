@@ -42,31 +42,31 @@ def generate_quiz(question, choice, answer, number, order):
     item = order[number]
     print(f"{number + 1}. {question[item]}")
     for each in choice[item]:
-        print(each)
+        print("  " + each)
     while True:
         valid_choices = ("a", "b", "c", "d")
-        user_ans = input("Enter your answer [a/b/c/d]: ")
+        user_ans = input("\nEnter your answer [a/b/c/d]: ")
         if user_ans in valid_choices:
             if user_ans == answer[item]:
-                print("You are correct!")
+                print("\nYou are correct!")
                 return 1
             else:
-                print("Sorry, you are incorrect!")
+                print("\nSorry, you are incorrect!")
                 return 0
         else:
-            print("Invalid input. Please try again.")
+            print("\nInvalid input. Please try again.")
 
 #Create a function that welcomes the user to start and how many items to quiz
 def start_quiz(count):
     while True:
         try:
-            num = int(input(f"There are {count} questions available. How many would you like to answer?"))
+            num = int(input(f"There are {count} questions available. How many would you like to answer? : "))
             if count >= num >= 0:
                 return num
             else:
-                print("Invalid input. Please try again.")
+                print("\nInvalid input. Please try again.\n")
         except:
-            print("Invalid input. Please try again.")
+            print("\nInvalid input. Please try again.\n")
 
 #Create a scoring system
 def score(points, max_points):
@@ -84,7 +84,9 @@ item_count = start_quiz(count)
 random_order = randomize_order(count)
 points = 0
 for num in range(item_count):
+    print("\n===========")
     print(f"Score: {points}/{item_count}")
+    print("===========\n")
     points += generate_quiz(*quiz, num, random_order)
 
 print(f"You scored {points}/{item_count}", score(points, item_count))
